@@ -1,0 +1,18 @@
+<h1>All the messages</h1>
+<div class="row">
+
+<div class="col-xs-3">
+  <ul>
+    {{#each model as |message|}}
+      <li>From: {{#link-to "messages.message" message }}
+      Message from {{message.from}}
+      {{/link-to}}
+  </li>
+    {{/each}}
+  </ul>
+  </div>
+  <div class="col-xs-9">
+  {{outlet}}
+
+  </div>
+</div>
