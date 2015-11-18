@@ -1,0 +1,5 @@
+<ul>
+{{#each messages as |message|}}
+<li>{{manage-star message=message}}{{link-to message.from "messages.message" message}}{{manage-archive message=message}}</li>
+{{/each}}
+</ul>

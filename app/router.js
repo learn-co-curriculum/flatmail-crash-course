@@ -10,6 +10,9 @@ Router.map(function() {
     this.route('message', {
       path: ':message_id'
     });
+    this.route('inbox');
+    this.route('starred');
+    this.route('archived');
   });
 });
 

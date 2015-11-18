@@ -1,18 +1,14 @@
 <h1>All the messages</h1>
+<button {{action "refreshMessages"}}>Refresh</button>
 <div class="row">
-
-<div class="col-xs-3">
-  <ul>
-    {{#each model as |message|}}
-      <li>From: {{#link-to "messages.message" message }}
-      Message from {{message.from}}
-      {{/link-to}}
-  </li>
-    {{/each}}
-  </ul>
+  <div class="col-xs-3">
+    <ul>
+      <li>{{link-to "Inbox" "messages.inbox"}}</li>
+      <li>{{link-to "Starred" "messages.starred"}}</li>
+      <li>{{link-to "Archived" "messages.archived"}}</li>
+    </ul>
   </div>
   <div class="col-xs-9">
   {{outlet}}
-
   </div>
 </div>
